@@ -1,0 +1,63 @@
+body {
+  background: url('bg_body.gif');
+}
+
+a, a.el, a.elRef, 
+a.el:visited, a.elRef:visited {
+  color: #709306;
+}
+
+#projectlogo img {
+  padding: 5px;
+  width:140px; 
+}
+
+#projectlogo a {
+  outline: none;
+}
+
+#projectname {
+  padding: 0px 15px;
+  color: #354A8D;
+  
+}
+
+div.image img{
+    width:600px;
+} 
+
+div.image img[src="nbs0.png"]{ 
+    width:605px; 
+}
+div.image img[src="nbs1.png"]{ 
+    width:605px; 
+}
+div.image img[src="nbs2.png"]{ 
+    width:605px; 
+}
+div.image img[src="nbs3.png"]{ 
+    width:605px; 
+}
+div.image img[src="nbs4.png"]{ 
+    width:605px; 
+}
+div.image img[src="nbs5.png"]{ 
+    width:605px; 
+}
+
+div.image img[src="2PCSetup.png"]{ 
+    width:800px; 
+}
+
+div.image img[src="aoi.png"]{ 
+    width:800px; 
+}
+
+div.image img[src="HelloEyetracker.png"]{ 
+    width:424px; 
+}
+
+
+div.image img[src="SMIGazeController.PNG"]{ 
+    width:561px; 
+}

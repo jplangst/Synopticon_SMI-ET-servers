@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libyuv">
+      <UniqueIdentifier>{d97d4af4-ab80-49f6-9898-542380186458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libyuv">
+      <UniqueIdentifier>{33c8af27-e607-4956-ac45-a92de21f0b4d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataContainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iViewNG-Convenience.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="opencvVisualization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImagerServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneCameraWAMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VpxEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\compare.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\compare_common.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\compare_gcc.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\compare_neon.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\compare_neon64.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\compare_win.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert_argb.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert_from.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert_from_argb.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert_jpeg.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert_to_argb.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\convert_to_i420.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\cpu_id.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\mjpeg_decoder.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\mjpeg_validate.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\planar_functions.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_any.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_argb.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_common.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_gcc.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_mips.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_neon.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_neon64.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\rotate_win.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_any.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_common.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_gcc.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_mips.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_neon.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_neon64.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\row_win.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_any.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_argb.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_common.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_gcc.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_mips.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_neon.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_neon64.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\scale_win.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+    <ClCompile Include="SDKs\libyuv\source\video_common.cc">
+      <Filter>Source Files\libyuv</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataContainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iViewNG-Convenience.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opencvVisualization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="circularfifo_memory_sequential_consistent.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImagerServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneCameraWAMP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VpxEncoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\basic_types.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\compare.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\convert.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\convert_argb.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\convert_from.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\convert_from_argb.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\cpu_id.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\mjpeg_decoder.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\planar_functions.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\rotate.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\rotate_argb.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\rotate_row.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\row.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\scale.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\scale_argb.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\scale_row.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\version.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="SDKs\libyuv\include\libyuv\video_common.h">
+      <Filter>Header Files\libyuv</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomDatatypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+SMI_GlassesEyeTrackingServer/.vs/*
+SMI_GlassesEyeTrackingServer/Release/*
+SMI_GlassesEyeTrackingServer/Debug/*
+
+SMI_RemoteTrackerServer/.vs/*
+SMI_RemoteTrackerServer/Release/*
+SMI_RemoteTrackerServer/Debug/*

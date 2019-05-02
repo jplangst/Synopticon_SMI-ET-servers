@@ -1,0 +1,19 @@
+{
+    "pid": 59960, 
+    "options": {
+        "reactor": null, 
+        "cdc": false, 
+        "loglevel": "info", 
+        "logtofile": false, 
+        "logformat": "standard", 
+        "command": "start", 
+        "logdir": null, 
+        "config": null, 
+        "colour": false, 
+        "cbdir": "C:\\git\\EyeTrackingGlass\\EyeTrackingServer_WAMP\\SDKs\\WAMP\\boost_1_63_0\\boost\\asio"
+    }, 
+    "argv": [
+        "C:\\Python27\\Scripts\\crossbar", 
+        "start"
+    ]
+}

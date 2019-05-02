@@ -1,0 +1,788 @@
+-------------------------------------------------------------------------------
+iView X SDK - Release Notes
+
+Copyright © 2017 SensoMotoricInstruments GmbH All rights reserved.
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Version 4.4.10							Created: February 03, 2017
+-------------------------------------------------------------------------------
+
+New Features: 
+-------------
+- added 64bit API support 
+- updated example projects (C#, C++, Matlab, Python, Unity) to work in 32bit and 64bit
+- updated the Unity integration and example project to target Unity 5.0 and newer
+- added new enum RecordingState and respective function iV_GetRecordingState() to query the servers recording status
+- added new enum TrackingMode and respective functions iV_GetTrackingMode() and iV_SetTrackingMode to replace the same functionality of iV_SetTrackingParameter
+- added new error code ERR_LICENSE_EXPIRED to be retured by function iV_Start() if the time limited license of the connected device has expired
+- added new error code ERR_DEPRECATED_FUNCTION for functions that are not supported any more in since iViewRED 4.2 (e.g. functions related to gaze AOIs and HED scene video)
+- updated and improved the iView X SDK manual
+
+Bugfixes: 
+-------------
+- fixed potential memory leaks and crashes when using image related function (iV_GetEyeImage(), iV_GetAccuracyImage, iV_GetTrackingMonitor, iV_GetCalibrationQualityImage)
+- fixed the calibration process in the EPrime package and experiment examples
+
+
+-------------------------------------------------------------------------------
+Version 4.2.63							Created: June 25, 2015
+-------------------------------------------------------------------------------
+
+New Features: 
+-------------
+- added support for next generation eye tracker devices (REDn Scientific, REDn Professional, RED250mobile)
+- added ETDevice enumeration value "REDn" for new device types
+- added ETApplication enumeration value "iViewNG" to support next generation eye tracking server
+- new smart tacking mode available (ET_PARAM_SMARTTRACKING)
+- added calibration method flag CALIBRATIONMETHOD_SMARTCALIBRATION to enable automatic skipping of poor calibration points
+- added functions iV_AbortCalibrationPoint() and iV_RecalibrateOnePoint() for better control of the calibration process
+- added new structure CalibrationPointQualityStruct and respective function iV_GetCalibrationQuality() to obtain detailed calibration process results
+- added new structure GazeChannelQualityStruct and respective function iV_GetGazeChannelQuality() to obtain detailed validation results
+- added new structure SpeedModeStruct and respective functions iV_GetSpeedModes() and iV_SetSpeedMode() to configure sampling frequencies
+- added iV_GetAvailableLptPorts() and iV_SetupLptRecording() functions to configure LPT signal recording in IDF files
+
+
+-------------------------------------------------------------------------------
+Version 3.7 Build 8	 			       	Created: February 06, 2015 
+-------------------------------------------------------------------------------
+
+Bugfixes: 
+-------------
+- fixed: RED4 tracking monitor is horizontally twisted 
+- fixed: validation behaves wrong if display device was set to secondary device while only connected to one 
+- fixed: meaningless accuracy values 
+- fixed: swap in the user and description parameters in the iV_SaveData function 
+- fixed: tracking status always '1' for RED5 devices 
+- fixed: crashes while device type in iView X has been changed 
+
+
+-------------------------------------------------------------------------------
+Version 3.6 Build 34	 			       	Created: May 27, 2014 
+------------------------------------------------------------------------------- 
+
+
+New Features: 
+------------- 
+- added auto accept functionality 
+- added iV_GetUseCalibrationKeys for enabling/disabling user interaction possibilities during calibration/validation process 
+- added iV_SetUseCalibrationKeys for enabling/disabling user interaction possibilities during calibration/validation process 
+
+Improvements: 
+------------- 
+- iV_ChangeCalibrationPoints function use now pixel values for RED devices instead of mm 
+- Geometry handling for RED devices 
+- new E-Prime Package file 
+
+Examples: 
+--------- 
+- NBS Presentation: updated data streaming 
+- Matlab: automatic differentiation between 32 and 64 bit architecture 
+
+Bugfixes: 
+--------- 
+- fixed: RED accuracy delivers -1 values 
+- fixed: iV_ConfigureFilter cannot reset average filter 
+- fixed: iV_ChangeCalibrationPoints function does not work for RED devices 
+- fixed: recording for HED returns wrong error codes 
+
+
+-------------------------------------------------------------------------------
+Version 3.4 Build 46	 			       	Created: January 20, 2014 
+-------------------------------------------------------------------------------
+
+New Features:
+-------------
+- iV_ConnectLocal: Added multiclient capability 
+- iV_GetTrackingStatus: Relative position in tracking box 
+- iV_ConfigureFilter: Configure gaze channel averaging 
+- iV_SetAOIHitCallback: Callback function for gaze AOIs 
+- iV_Hide...Window: Close API monitoring windows 
+- iV_GetCalibrationStatus: Gets the calibration status 
+- iV_GetDeviceName: Gets the device name 
+- Added 64bit binaries 
+- Added Windows 7, 8, 8.1 support 
+
+Improvements: 
+-------------
+- iV_Calibrate: auto accept first point, resizing calibration point 
+- iV_Disconnect: data streaming will not be stopped 
+- iV_SaveData: fixed deadlocks if existing file cannot be overwritten 
+- Screen dependent adaptive gaze data filter 
+- iV_GetSample32 gets timestamps in ms
+- iV_GetEvent32 gets timestamps in ms 
+- New RED geometry functions: iV_GetREDGeometry, iV_GetCurrentREDGeometry, iV_SetREDGeometry, iV_SelectREDGeometry, iV_DeleteGeometry 
+- Deprecated functions: iV_SetupREDStandAloneGeometry, iV_SetupStandAloneGeometry, iV_DeleteStandAloneGeometry, iV_SetupREDMonitorAttachedGeometry, iV_SetupMonitorAttachedGeometry, iV_DeleteMonitorAttachedGeometry 
+- Improved documentation 
+
+Examples:
+---------
+- Python: Added Callback demo 
+- C#: Added 64bit demo application 
+- WPF C#: Added 64bit demo application 
+- C++: Added 64bit demo application 
+- E-Prime: Added demo for iV_GetEvent32 
+- Added disclaimer 
+
+Bugfixes: 
+---------
+- fixed: Callbacks reset after calibration failure 
+- fixed: duplicated events and samples 
+- fixed: iV_GetEyeImage reports image with height and width of 0 
+- fixed: 8P Calibration is not available via API 
+- fixed: iV_GetCurrentTimestamp delivers 0 
+- fixed: Multiple client data handling conflicts 
+
+
+-------------------------------------------------------------------------------
+Version 3.3 Build 0		 			       	Created: May 2, 2013 
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- iV_GetCurrentTimestamp does only give sample timestamps 
+	- tracking monitor, eye image monitor, accuracy monitor, scene video monitor not more top most 
+	- using anti-aliased calibration targets 
+	- internal auto accept calibration activated 
+
+Fixed:
+	- iV_Validate returns RET_CALIBRATION_ABORTED 
+	- API version is always 0.0.0 
+	- iV_GetEvent returns always invalid events 
+	- iV_AbortCalibration always returns an error 
+	- geometry profiles were not deleted proper 
+	- defined wrong server version for feature of using iV_AbortCalibration for validation 
+	- calibration setting 'auto accept' does accept the first calibration point automatically 
+	- possible to perform an 8 point calibration via the API 
+	- not able to set native binocular selection via iV_SetTrackingParameter function 
+	- changed all void return values from to int 
+
+
+-------------------------------------------------------------------------------
+Version 3.1 Build 1 			     			Released: September 20, 2012 
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_GetAOIOutputValue 
+	- added heuristic filter 
+	- added iV_GetFeatureKey  
+	- added iV_GetLicenseDueDate 
+	- added iV_GetSerialNumber 
+	- update C# Example 
+	- update C# WPF Example 
+	- update manual 
+	- update installer 
+	
+	
+-------------------------------------------------------------------------------
+Version 3.1 Build 0				     			Released: June 27, 2012
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- update manual 
+	- update installer 
+	- update C# WPF Example 
+	- update Matlab Example 
+	- update NBS Presentation extension 
+	- iView X and eyetracking-server can be used on the same computer 
+
+	
+-------------------------------------------------------------------------------
+Version 3.0 Build 52
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- update HED Scene Video integration  
+
+	
+-------------------------------------------------------------------------------
+Version 3.0 Build 51				    
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated set callback functions 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 47				     
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- updated gaze data filter 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 44				     
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- added iV_ConfigureFilter 
+	- updated Python Examples 
+	- updated NBS Presentation Examples (added validation procedure) 
+
+Fixed: 
+	- cannot resize custom calibration targets 
+	- only possible to use .bmp as calibration target 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 43				     
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- added iV_GetCalibrationPoint 
+
+	
+-------------------------------------------------------------------------------
+Version 3.0 Build 42				     
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- changed order of AOIStruct 
+	- changed data types of AOIRectangleStruct 
+
+Fixed: 
+	- calibration is activated at incoming calibration acknowledge 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 41				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_GetMonitorAttachedGeometry 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 40				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_SetGeometryProfile 
+	- added iV_GetGeometryProfiles 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 39				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated iV_SetupMonitorAttachedGeometry 
+	- updated tracking monitor 
+	- updated iV_ChangeCalibrationPoint (for RED-m devices) 
+	- updated iV_ResetCalibrationPoints (for RED/RED-m devices) 
+	- differentiate RED-m monocular confidence value 
+
+Fixed: 
+	- iV_SaveCalibration/iV_LoadCalibration error 
+	- change iV_SetEventDetectionParameter not recorgnized 
+	- corrupted heap at unloading library 
+	- scene video monitor closes after iV_Disconnect has been called 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 38				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated manual 
+
+Fixed: 
+	- iV_Log does not write to log file 
+	- error at unloading library 
+	- gaze data filter 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 37				     
+-------------------------------------------------------------------------------
+
+
+Fixed: 
+	- tracking monitor not initialized 
+	- setup geometry names containing spaces 
+	- changes of TTL status after AOI has been disabled 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 36				     
+-------------------------------------------------------------------------------
+
+
+Fixed:
+	- calibration/validation callback/get calibration point 
+
+	
+-------------------------------------------------------------------------------
+Version 3.0 Build 35				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated Scene Video visualization to Win API 
+
+Fixed:
+	- high CPU load while an external window for eye image or tracking monitor is open 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 34				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added check if SMI eye tracking application is installed 
+	- added check if SMI eye tracking application is running 
+	- updated return information on local host (ERR_EYETRACKING_APPLICATION_NOT_RUNNING) 
+	- updated return information on local host (ERR_WRONG_COMMUNICATION_PARAMETER) 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 33				     
+-------------------------------------------------------------------------------
+
+
+Fixed:
+	- iV_RemoveAOI exception 
+	- iV_EnableAOI, iV_EnableAOIGroup changes TTL state after function call 
+	- iV_DisableAOI, iV_DisableAOIGroup changes TTL state after function call 
+	- resolution dependent corrupt accuracy image validation 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 32				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated tracking monitor visualization to Win API 
+	- updated eye image visualization to Win API 
+
+Fixed:
+	- numerical accuracy calculation 
+	- wrong return values for aborting iV_Calibrate 
+	- wrong return values for aborting iV_Validate 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 31				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_ShowAccuracyMonitor 
+	- updated accuracy image visualization to Win API 
+	- increased UDP buffer 
+	
+Fixed: 
+	- calibration and validation Callbacks 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 30				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated Calibration/Validation visualization procedure to Win API 
+	- iV_Start adopted to new iView naming 
+	- added iV_DisableProcessorHighPerformanceMode
+	- added iV_EnableProcessorHighPerformanceMode
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 29				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated manual 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 28				     
+-------------------------------------------------------------------------------
+
+
+Fixed:
+	- iView X OEM connection crash (inconsistencies in receiving commands) 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 27				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated tracking monitor (distance visualization for RED) 
+
+Fixed:
+	- start eye image streaming on demand (setting the callback after connecting) 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 26				    
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- automatic inclination angle calculation for RED-m geometry 
+	- added iV_PauseEyetracking
+	- added iV_ContinueEyetracking
+	- updated tracking monitor visualization 
+
+Fixed:
+	- iV_Start (working on Windows 7)
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 24				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- update manual 
+	- update manual (change EyeImage visualization functions with RED devices in 'Function and Device Overview') 
+
+Fixed:
+	- update Validation procedure (wrong position of calibration points if one display device is available) 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 23				     
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- Integrate check for RED-m camera presence 
+	- added iV_DeleteMonitorAttachedGeometry
+	- added iV_DeleteStandAloneGeometry
+	- added iV_SetupStandAloneMode
+	- added iV_SetupMonitorAttachedGeometry
+	- added StandAloneModeGeometryStruct
+	- added MonitorAttachedGeometryStruct
+	- added iV_SetConnectionTimeout
+	- updated iV_Start (enum parameter included for different iView X applications)
+	- updated installer (included USBControllerCheck.dll)
+
+
+Fixed:
+	- updated iV_Quit
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 22				    
+-------------------------------------------------------------------------------
+
+
+Fixed:
+	- Scene Video callback error
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 21				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- possible to make validation with loaded calibration 
+	- updated manual 
+	- updated installer 
+
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 20				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- update manual 
+	- update installer 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 19				     
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- update manual 
+	- updated installer
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 18				     
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- performance improvement for tracking monitor drawing 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 17
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_GetCalibrationParameter 
+	- updated manual
+	- updated installer 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 16				     Released: December 1, 2011
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added outputMessage to AOIStruct 
+	- added iV_GetAccuracyImage
+	- updated iV_ChangeCalibrationPoint
+	- updated manual 
+	- updated installer 
+Fixed:
+	- C++ establishing connection 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 15				    Released: November 11, 2011
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated handling calibration and validation points
+	- updated handling raw data samples
+	- updated iV_SaveData
+	- updated E-Prime Examples
+	- updated E-Prime Package
+	- updated C# Examples
+	- updated manual 
+	- updated installer 
+	- updated possible to install 32bit on 64bit OS
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 11				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added NBS Presenation Interface Slideshow Example
+	- added NBS Presenation Interface Gaze Contingent Example
+	- added iV_SetupREDMonitorAttachedGeometry
+	- updated C# Examples
+	- updated manual 
+	- updated installer 
+
+Fixes:
+	- updated iV_SaveData 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 10				       
+-------------------------------------------------------------------------------
+
+
+Fixes:
+	- updated RED Tracking Monitor
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 9				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added MEG 250 device
+
+Fixes:
+	- C++ missing msvcr90.dll
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 8				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_AbortCalibration
+	- added iV_AcceptCalibrationPoint
+	- added iV_ChangeCalibrationPoint
+	- added iV_ResetCalibrationPoints
+	- added iV_GetSceneVideo
+	- added Scene Video Callback
+	- added iV_GetEyeImage 
+	- added Eye Image Callback
+	- added TTL output / AOI hit 
+	- updated manual 
+	- updated installer 
+
+Fixes:
+	- E-Prime crash
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 7				       Released: July 8, 2011
+-------------------------------------------------------------------------------
+
+
+Fixes:
+	- updated Scene Video and Eye Image Monitor
+	- updated iV_SaveData - return values
+	- updated iV_REDStandAloneMode
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 6				       Released: June 30, 2011
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_ShowSceneVideoMonitor
+	- added iV_AcceptPoint
+	- added iV_AbortCalibration
+	- added iV_SetCalibrationPoint
+	- added iV_ResetCalibrationPoints
+	- added raw data filter
+	- update manual 
+	- update installer 
+
+Fixes:
+	- updated Matlab Examples 
+	- updated C# Example 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 5				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- updated manual 
+	- updated installer 
+
+Fixes:
+	- updated Matlab Examples 
+	- updated Python Examples 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 4				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added 'start online fixation' as event 
+	- updated manual 
+	- updated installer 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 3				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added RED-m device
+	- added iV_SetupREDOperationMode 
+	- added iV_Start 
+	- added iV_Quit 
+	- added iV_GetCurrentTimestamp 
+	- updated manual 
+	- updated installer 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 2				       
+-------------------------------------------------------------------------------
+
+
+Enhancements:
+	- added iV_LoadCalibration 
+	- added iV_SaveCalibration 
+	- updated start- / stop- / pause- / continue- data recording function 
+	- updated save data function 
+	- added EPrime Standard-Version Slideshow Example 
+	- added EPrime Standard-Version Gaze contingent Example 
+	- added iView X status request 
+	- update manual 
+	- update installer 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 1				    
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- added iV_SetupCalibration 
+	- added iV_ShowEyeMonitor 
+	- added Python Example 
+	- added C# WPF Example 
+	- updated calibration setup
+	- added Win 64 bit installer
+	- updated manual 
+	- updated installer 
+
+Fixes: 
+	- update Matlab Example 
+
+
+-------------------------------------------------------------------------------
+Version 3.0 Build 0				    Released: December 18, 2010
+-------------------------------------------------------------------------------
+
+
+Enhancements: 
+	- added iV_Calibrate 
+	- added iV_ClearRecordingBuffer 
+	- added iV_Connect 
+	- added iV_Disconnect 
+	- added iV_GetAccuracy 
+	- added iV_GetCurrentCalibrationPoint 
+	- added iV_GetEvent 
+	- added iV_GetEvent32 
+	- added iV_GetSample 
+	- added iV_GetSample32 
+	- added iV_GetSystemInfo 
+	- added iV_IsConnected 
+	- added iV_Log 
+	- added iV_SaveData 
+	- added iV_SendCommand 
+	- added iV_SendImageMessage 
+	- added iV_SetCalibrationCallback 
+	- added iV_SetEventCallback 
+	- added iV_SetSampleCallback 
+	- added iV_SetLogger 
+	- added iV_SetTrackingParameter 
+	- added iV_ShowTrackingMonitor 
+	- added iV_StartRecording  
+	- added iV_StopRecording 
+	- added iV_Validate  
+	- added EPrime Professional-Version Slideshow Example 
+	- added EPrime Professional-Version Gaze Contingent Example 
+	- added Matlab Slideshow Example 
+	- added Matlab Gaze contingent Example 
+	- added c++ Example 
+	- added C# Example 
+	- added manual 
+	- added installer 
+
+
+
+
